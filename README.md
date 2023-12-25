@@ -1,4 +1,4 @@
-Official repository for the WACV 2024 paper [Multi-view Classification with Hybrid Fusion and Mutual Distilation](https://openaccess.thecvf.com/content/WACV2024/papers/Black_Multi-View_Classification_Using_Hybrid_Fusion_and_Mutual_Distillation_WACV_2024_paper.pdf). Here, you'll find our code to train and evaluate our method, MV-HFMD. Currently, we provide code available to run on the Hotels-8k dataset. 
+Official repository for the WACV 2024 paper [Multi-view Classification with Hybrid Fusion and Mutual Distilation](https://openaccess.thecvf.com/content/WACV2024/papers/Black_Multi-View_Classification_Using_Hybrid_Fusion_and_Mutual_Distillation_WACV_2024_paper.pdf). Here, you'll find our code to train and evaluate our method, MV-HFMD. Currently, we provide code to run MV-HFMD on the Hotels-8k dataset. 
 
 ## Instructions
 
