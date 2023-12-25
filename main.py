@@ -31,13 +31,12 @@ def main(logger):
     print('Number of classes: ', dataset_train.num_classes)
 
     optimizer_model = torch.optim.SGD(params=model.parameters(), lr=args.lr, weight_decay=args.wd, momentum=args.momentum)
-    # scheduler = torch.optim.lr_scheduler.OneCycleLR(optimizer=optimizer_model, max_lr=args.lr,
-    #                                                 epochs=args.num_epochs,
-    #                                                 div_factor=10,
-    #                                                 steps_per_epoch=len(dataset_train) // args.batch_size,
-    #                                                 final_div_factor=1000,
-    #                                                 pct_start=5 / args.num_epochs, anneal_strategy='cos')
-    scheduler = None
+    scheduler = torch.optim.lr_scheduler.OneCycleLR(optimizer=optimizer_model, max_lr=args.lr,
+                                                    epochs=args.num_epochs,
+                                                    div_factor=10,
+                                                    steps_per_epoch=len(dataset_train) // args.batch_size,
+                                                    final_div_factor=1000,
+                                                    pct_start=5 / args.num_epochs, anneal_strategy='cos')
 
     criterion = nn.CrossEntropyLoss(ignore_index=-1)
     if args.use_mutual_distillation_loss:
