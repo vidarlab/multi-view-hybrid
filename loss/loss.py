@@ -31,7 +31,7 @@ class MutualDistillationLoss(nn.Module):
         max_p, _ = torch.max(p, dim=1)
         max_p = max_p.mean().item()
 
-        log_q = torch.log_softmax(averaged_single_logits, dim=1)
+        log_q = torch.log_softmax(averaged_single_logits / self.temp, dim=1)
         log_p = torch.log_softmax(multi_view_logits / self.temp, dim=1)
 
         loss = (1/2) * (self.kl_div(log_p, q.detach()).sum(dim=1).mean() + self.kl_div(log_q, p.detach()).sum(dim=1).mean())
