@@ -2,7 +2,7 @@ Official repository for the WACV 2024 paper [Multi-view Classification with Hybr
 
 ## Instructions
 
-To train our method on Hotels-8k, first, download the dataset from this [link](https://tuprd-my.sharepoint.com/:u:/g/personal/tul03156_temple_edu/EdVGFFJyQKpGqxmk-WeApP8BLzHIaQ2XYGhhR6E1s0ntqQ?e=qR5rZf). Unzip the file into the desired directory. Then, run
+To train our method on Hotels-8k, first, download the dataset from this [link](https://files.vidarlab.net/s/EeHzz9MqggSTZMc). Unzip the file into the desired directory. Then, run
 
     python3 main.py --data-directory {DATA_DIRECTORY}
     
